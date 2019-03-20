@@ -34,10 +34,12 @@ int min_num(int x, int y)
 
 int main()
 {
-	int check_find, max_num, min_num;
+	int check_find, max_num, min_num, arr_num;
 	clock_t start, stop;
 	double duration;
-	for (int num = 1; num < 101; num++)
+	printf("크기가 몇인 배열을 만들껀가요? ");
+	scanf("%d", &arr_num);
+	for (int num = 1; num < arr_num+1; num++)
 	{
 		int append_num;
 		printf("배열에 추가할 %d번째 숫자를 적으세요. ", num);
@@ -45,9 +47,8 @@ int main()
 		append(append_num, num);
 	}
 	printf("1단계 완료");
-	int len = sizeof(arr) / sizeof(int);
 	printf("배열 전체 출력 {");
-	for (int k = 0; k < len; k++)
+	for (int k = 0; k < arr_num; k++)
 	{
 		printf("%d ", arr[k]);
 	}
@@ -58,7 +59,7 @@ int main()
 		scanf("%d", &check_find);
 		if (check_find == 0) {
 			start = clock();
-			max_num = find_max_num(arr, 99);
+			max_num = find_max_num(arr, arr_num-1);
 			stop = clock();
 			duration = (double)(stop - start) / CLOCKS_PER_SEC;
 			printf("최대값은 %d\n", max_num);
@@ -66,7 +67,7 @@ int main()
 		}
 		else if (check_find == 1) {
 			start = clock();
-			min_num = find_min_num(arr, 99);
+			min_num = find_min_num(arr, arr_num-1);
 			stop = clock();
 			duration = (double)(stop - start) / CLOCKS_PER_SEC;
 			printf("최소값은 %d\n", min_num);
