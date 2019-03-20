@@ -3,7 +3,7 @@
 #include <time.h>
 
 int arr[100];
-void append(int num, int n)
+void append(int num, int n) //입력받은 값 배열에 삽입
 {
 	arr[n - 1] = num;
 }
@@ -37,8 +37,16 @@ int main()
 	int check_find, max_num, min_num, arr_num;
 	clock_t start, stop;
 	double duration;
-	printf("크기가 몇인 배열을 만들껀가요? ");
-	scanf("%d", &arr_num);
+	while (1)
+	{
+		printf("크기가 몇인 배열을 만들껀가요? ");
+		scanf("%d", &arr_num);
+		if (arr_num <= 100)
+		{
+			break;
+		}
+		printf("100이하의 크기를 지정해주세요");
+	}
 	for (int num = 1; num < arr_num+1; num++)
 	{
 		int append_num;
