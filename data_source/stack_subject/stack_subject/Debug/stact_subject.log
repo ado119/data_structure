@@ -1,0 +1,7 @@
+﻿  stack.c
+c:\users\dongwon\source\repos\stact_subject\stact_subject\stack.c(88): warning C4101: 'c' :참조되지 않은 지역 변수입니다.
+c:\users\dongwon\source\repos\stact_subject\stact_subject\stack.c(181): warning C4013: 'exit'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+c:\users\dongwon\source\repos\stact_subject\stact_subject\stack.c(186): warning C4098: 'main': 'void' 함수에서 값을 반환하고 있습니다.
+c:\users\dongwon\source\repos\stact_subject\stact_subject\stack.c(174): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+  stact_subject.vcxproj -> C:\Users\DongWon\source\repos\stact_subject\Debug\stact_subject.exe
